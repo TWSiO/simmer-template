@@ -108,3 +108,56 @@ let upstream =
       https://github.com/purescript/package-sets/releases/download/psc-0.13.8-20210226/packages.dhall sha256:7e973070e323137f27e12af93bc2c2f600d53ce4ae73bb51f34eb7d7ce0a43ea
 
 in  upstream
+    with simmer =
+    { dependencies =
+        [ "console"
+        , "debug"
+        , "effect"
+        , "node-fs"
+        , "node-readline"
+        , "numbers"
+        , "optparse"
+        , "ordered-collections"
+        , "psci-support"
+        , "spec"
+        , "string-parsers"
+        ]
+    , repo =
+        "https://github.com/TWSiO/simmer.git"
+    , version =
+        "v0.1.0"
+    }
+    with simmer-tools =
+    { dependencies =
+        [ "console"
+        , "effect"
+        , "psci-support"
+        , "simmer"
+        ]
+    , repo =
+        "https://github.com/TWSiO/simmer-tools.git"
+    , version =
+        "v0.1.0"
+    }
+    with simmer-std =
+    { dependencies =
+        [ "console", "effect", "psci-support", "simmer" ]
+    , repo =
+        "https://github.com/TWSiO/simmer-std.git"
+    , version =
+        "v0.1.0"
+    }
+    with simmer-random =
+    { dependencies =
+        [ "console"
+        , "effect"
+        , "psci-support"
+        , "simmer"
+        , "spec"
+        , "random"
+        ]
+    , repo =
+        "https://github.com/TWSiO/simmer-random.git"
+    , version =
+        "v0.1.0"
+    }
